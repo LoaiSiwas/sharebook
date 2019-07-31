@@ -8,7 +8,7 @@ function App() {
     <div>
       <AppBar></AppBar>
       <Body></Body>
-      <p>Components Here</p>
+      <p>Any Extra Components Here</p>
     </div>
   );
 }
