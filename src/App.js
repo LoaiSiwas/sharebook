@@ -9,11 +9,13 @@ import AppBar from './Components/Appbar';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    background: "#fafafa",
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    background: "#fafafa",
   },
 }));
 
