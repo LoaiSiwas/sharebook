@@ -4,10 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
-import MenuItem from '@material-ui/core/MenuItem';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container'
 import Button from '@material-ui/core/Button'
@@ -49,12 +47,12 @@ const useStyles = makeStyles(theme => ({
 
       return (
            
-             <Container style={{width: '90vh',}}>
+             <Container style={{width: '100%',}}>
              <Grid  container
                 direction="column"
                 justify="flex-start"
                 alignItems="flex-start">
-                     <Grid item xs={3}>
+                     <Grid>
                        <TextField
                         id="filled-simple-start-adornment"
                         className={clsx(classes.margin, classes.textField)}
@@ -66,7 +64,7 @@ const useStyles = makeStyles(theme => ({
                          />
                       </Grid>
 
-                      <Grid item xs={3}>
+                      <Grid>
                        <TextField
                         id="filled-simple-start-adornment"
                         className={clsx(classes.margin, classes.textField)}
@@ -78,7 +76,7 @@ const useStyles = makeStyles(theme => ({
                          />
                       </Grid>
 
-                      <Grid item xs={3}>
+                      <Grid>
                        <TextField
                         id="filled-simple-start-adornment"
                         className={clsx(classes.margin, classes.textField)}
@@ -126,7 +124,6 @@ const useStyles = makeStyles(theme => ({
                                 ),
                                 }}
                             />
-
                          </Grid>
                          <Grid item>
                          <Button variant="contained" className={classes.button}>
@@ -134,18 +131,6 @@ const useStyles = makeStyles(theme => ({
                             </Button>
                           </Grid>
                       </Grid>
-
-                      
-
-                    
-
-
-                </Grid>
-                   
-             
-
-
-
-             </Container>
-          
+                </Grid>       
+             </Container>       
       )}
