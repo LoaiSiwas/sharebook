@@ -11,7 +11,7 @@ import FilledInputAdornments from './Components/SignUpForm'
 // import AppBar from './Components/Appbar';
 
 // Feras import
-// import AppBar from './Components/Appbar';
+import BookCard from './Components/BookCard.js'
 // import AppBar from './Components/Appbar';
 // import AppBar from './Components/Appbar';
 
@@ -51,7 +51,7 @@ function App() {
         <Paper className={classes.paper}>Mahmoud</Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper}>Feras</Paper>
+        <Paper className={classes.paper}><BookCard /></Paper>
       </Grid>
       <Grid item xs={12}>
         <Paper className={classes.paper}>Feras</Paper>
