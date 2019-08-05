@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import './App.css';
 import AppBar from './Components/Appbar';
-
+import Footer from './Components/Footer';
 // Mahmoud import
 import FilledInputAdornments from './Components/SignUpForm' 
 // import AppBar from './Components/Appbar';
@@ -63,7 +63,7 @@ function App() {
         <Paper className={classes.paper}>Loai</Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper}>Footer</Paper>
+        <Paper className={classes.paper}><Footer></Footer></Paper>
       </Grid>
     </Grid>
   </div>
