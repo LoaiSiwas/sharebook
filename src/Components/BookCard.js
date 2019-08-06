@@ -52,9 +52,9 @@ db.collection('books').get().then((snapshot) => {
 
 export default function MediaCard() {
   const divStyle = {
-    margin: '40px',
     display: 'flex',
-    flexwrap: 'nowrap',
+    flexwrap: 'wrap',
+    overflow: 'scroll',
   };
   
   return (
