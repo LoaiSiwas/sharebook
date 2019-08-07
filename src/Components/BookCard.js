@@ -1,5 +1,5 @@
 import React from 'react';
-import BookDetails from './BooksDetails.js'
+import BookDetails from './BooksList.js'
 
 export default function BookCard() {
   const divStyle = {
