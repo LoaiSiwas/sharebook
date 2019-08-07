@@ -38,7 +38,7 @@ export default function BookCard(props) {
           </Typography>
         </CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-            {props.country}
+            {props.country} / {props.city}
           </Typography>
       </CardActionArea>
       <CardActions>

@@ -42,6 +42,7 @@ export default class BooksList extends React.Component {
                 img={book.data().img}
                 description={book.data().Description}
                 country={book.data().Country}
+                city={book.data().City}
              />
         ))
 
