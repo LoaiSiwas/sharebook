@@ -47,7 +47,7 @@ export default class BooksList extends React.Component {
         ))
 
         return (
-            <Grid container>
+            <Grid container spacing={3}>
                 {bookCards}
             </Grid>
         )
