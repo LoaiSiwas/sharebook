@@ -32,10 +32,8 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+    <AppBar></AppBar>
     <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}><AppBar></AppBar></Paper>
-      </Grid>
       <Grid item xs={9}>
         <Paper className={classes.paper}><BooksList /></Paper>
       </Grid>
@@ -52,7 +50,7 @@ function App() {
         <Paper className={classes.paper}>Mahmoud</Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper}><BookCard></BookCard></Paper>
+        <Paper className={classes.paper}>Feras</Paper>
       </Grid>
       <Grid item xs={12}>
         <Paper className={classes.paper}>Feras</Paper>
@@ -63,10 +61,8 @@ function App() {
       <Grid item xs={12}>
         <Paper className={classes.paper}>Loai</Paper>
       </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}><Footer></Footer></Paper>
-      </Grid>
     </Grid>
+    <Footer></Footer>
   </div>
   );
 }
