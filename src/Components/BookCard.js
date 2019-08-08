@@ -19,6 +19,10 @@ const useStyles = makeStyles({
 
 export default function BookCard(props) {
   const classes = useStyles();
+
+  function showDetails() {
+    alert(`You clicked the details button`);
+  }
   
   return (
     <Grid item>
@@ -42,7 +46,7 @@ export default function BookCard(props) {
           </Typography>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button onClick={showDetails} size="small" color="primary">
           Details
         </Button>
       </CardActions>
