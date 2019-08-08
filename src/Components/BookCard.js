@@ -1,55 +1,89 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Collapse from '@material-ui/core/Collapse';
+import Avatar from '@material-ui/core/Avatar';
+import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
+import { red } from '@material-ui/core/colors';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
-const useStyles = makeStyles({
+
+const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 300,
   },
   media: {
-    height: 140,
+    height: 0,
+    paddingTop: '56.25%', // 16:9
   },
-});
+  expand: {
+    transform: 'rotate(0deg)',
+    marginLeft: 'auto',
+    transition: theme.transitions.create('transform', {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: 'rotate(180deg)',
+  },
+}));
 
 export default function BookCard(props) {
   const classes = useStyles();
-
-  function showDetails() {
-    alert(`You clicked the details button`);
-  }
-  
+  const [expanded, setExpanded] = React.useState(false);
+  const ulStyle = {
+    listStyleType: "none",
+  };
+  function handleExpandClick() {
+    setExpanded(!expanded);
+  }  
   return (
     <Grid item>
     <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.img}
-          title={props.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {props.description}
-          </Typography>
-        </CardContent>
+      <CardHeader
+        title={props.title}
+      />
+      <CardMedia
+        className={classes.media}
+        image={props.img}
+        title={props.title}
+      />
+      <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-            {props.country} / {props.city}
-          </Typography>
-      </CardActionArea>
-      <CardActions>
-        <Button onClick={showDetails} size="small" color="primary">
-          Details
-        </Button>
+        {props.description}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton
+          className={clsx(classes.expand, {
+            [classes.expandOpen]: expanded,
+          })}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </IconButton>
       </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>
+          <ul style={ulStyle}>
+            <li>Author: {props.author}</li>
+            <li>Year of publication: {props.year}</li>
+            <li>Country: {props.country}</li>
+            <li>City: {props.city}</li>
+          </ul>
+        </CardContent>
+      </Collapse>
     </Card>
     </Grid>
   );

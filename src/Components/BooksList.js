@@ -33,6 +33,8 @@ export default class BooksList extends React.Component {
                 description={book.data().Description}
                 country={book.data().Country}
                 city={book.data().City}
+                author={book.data().Author}
+                year={book.data().Year}
              />
         ))
 
