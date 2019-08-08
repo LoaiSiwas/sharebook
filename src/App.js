@@ -6,7 +6,7 @@ import './App.css';
 import AppBar from './Components/Appbar';
 import Footer from './Components/Footer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-
+import MyBooks from './Components/MyBooks'
 // Mahmoud import
 import FilledInputAdornments from './Components/SignUpForm' 
 // import AppBar from './Components/Appbar';
@@ -43,7 +43,7 @@ function App() {
             <Paper className={classes.paper}>
               <Route exact path='/' component={BooksList}></Route>
               <Route exact path='/Profile' component={BooksList}></Route>
-              <Route exact path='/MyBooks' component={BooksList}></Route>
+              <Route exact path='/MyBooks' component={MyBooks}></Route>
             </Paper>
           </Grid>
 
@@ -52,7 +52,7 @@ function App() {
           </Grid>
 
           <Grid item xs={12}>
-            <Paper className={classes.paper}>Test</Paper>
+            <Paper className={classes.paper}>test</Paper>
           </Grid>
 
     </Grid>
