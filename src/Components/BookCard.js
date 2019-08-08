@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles({
   card: {
-    maxWidth: 345,
+    maxWidth: 300,
   },
   media: {
     height: 140,
