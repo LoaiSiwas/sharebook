@@ -16,7 +16,8 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore()
   
   function renderBook(doc){
-    let div = document.createElement('div');
+   
+   let div = document.createElement('div');
     let img = document.createElement('img')
     let title = document.createElement('h2');
     let Address = document.createElement('p');
@@ -41,6 +42,7 @@ const db = firebase.firestore()
     div.appendChild(details);
   
     document.getElementById("book-grid").appendChild(div);
+    
   }
   
   db.collection('books').get().then((snapshot) => {
