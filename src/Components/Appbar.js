@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { NavLink } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -113,11 +114,12 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Home</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My Books</MenuItem>
+      <MenuItem onClick={handleMenuClose}><NavLink to='/'>Home</NavLink></MenuItem>
+      <MenuItem onClick={handleMenuClose}><NavLink to='/Profile'>My Profile</NavLink></MenuItem>
+      <MenuItem onClick={handleMenuClose}><NavLink to='/MyBooks'>My Books</NavLink></MenuItem>
       <MenuItem onClick={handleMenuClose}>Sign out</MenuItem>
     </Menu>
+    
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
