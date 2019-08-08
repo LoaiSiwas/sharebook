@@ -14,7 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-
+ 
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
@@ -161,7 +161,7 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
-  return (
+  return ( 
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
@@ -182,6 +182,7 @@ export default function PrimarySearchAppBar() {
             </div>
             <InputBase
               placeholder="Search in Share Book…"
+              type="text" 
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
@@ -228,5 +229,6 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
     </div>
+  
   );
 }
