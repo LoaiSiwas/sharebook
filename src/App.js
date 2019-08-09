@@ -15,7 +15,7 @@ import Profile from './Components/Profile';
 
 // Feras import
 import BooksList from './Components/BooksList';
-// import AppBar from './Components/Appbar';
+import SubmitForm from './Components/SubmitForm';
 // import AppBar from './Components/Appbar';
 
 const useStyles = makeStyles(theme => ({
@@ -51,7 +51,7 @@ function App() {
         <Paper className={classes.paper}>Mahmoud</Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper}>Feras</Paper>
+        <Paper className={classes.paper}><SubmitForm /></Paper>
       </Grid>
       <Grid item xs={12}>
         <Paper className={classes.paper}>Feras</Paper>
