@@ -13,7 +13,9 @@ import { fade, makeStyles } from '@material-ui/core/styles';
         }
 
 updateSearch(event) {
-this.setState({searchBook: event.target.value}) 
+this.setState({searchBook: event.target.value})
+document.getElementById("book-Search").innerHTML = "";
+ 
 }
 
     
@@ -49,15 +51,19 @@ this.setState({searchBook: event.target.value})
   function SearchBook(doc){
 
     if (doc.data().Title.includes(SearchBookValue) && SearchBookValue!== '' ){
+      
+    // document.getElementById("book-Search").innerHTML = "";
+
     let div = document.createElement('div');
     let img = document.createElement('img')
     let title = document.createElement('h2');
+    let description = document.createElement('p');
     let Address = document.createElement('p');
     let details = document.createElement('a');
     //let SearchTitle = 'Search Results';
     
     
-    img.src = doc.data().ImageURL;
+    img.src = doc.data().img;
     details.style.cssText = 'padding: 0.5em 1em;margin-bottom:1em; display: inline-block;text-decoration: none;border: 1px solid silver;box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);'
     div.style.cssText = 'font-family: "Roboto", "Helvetica", "Arial", sans-serif;border-raduis:4px;border: 1px solid silver; width:15em;margin:5px;box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);'
     img.style.cssText = 'width:15em;'
@@ -66,21 +72,23 @@ this.setState({searchBook: event.target.value})
     div.setAttribute('data-id', doc.id);
     details.setAttribute('href', 'showDetails(doc.id)');
     title.textContent = doc.data().Title;
-    Address.textContent = 'Location: ' + doc.data().Address;
+    description.textContent = doc.data().Description;
+    Address.textContent = 'Location: ' + doc.data().Country + ' ' + doc.data().City;
     details.textContent = 'More details'
    
     div.appendChild(img);
     div.appendChild(title);
+    div.appendChild(description);
     div.appendChild(Address);
     div.appendChild(details);
   
     document.getElementById("book-Search").appendChild(div);
-    }
-    else {
-        
+    
+    
     }
   }
-  
+
+  //db.collection('books').get().then((snapshot) => {
   db.collection('books').get().then((snapshot) => {
       snapshot.docs.forEach(doc => {
           SearchBook(doc);
@@ -88,15 +96,18 @@ this.setState({searchBook: event.target.value})
   })
   return (<div>
       <div style={searchCSS}>
-          <form>
+         {/* <form> */}
             <div style={searchIconCSS}></div>
             <SearchIcon />
       <input  placeholder="Search in Share Book…" type="text" value={this.state.searchBook} 
       onChange = {this.updateSearch.bind(this)}
       >
       </input>
-      <button type="submit" > Search</button>
-      </form>
+      <button 
+      onClick = {this.updateSearch.bind(this)}
+      //type="submit"
+       > Search</button>
+     {/* </form> */}
       </div>
 
 <div id="book-Search" style={divStyle}>
