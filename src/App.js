@@ -5,13 +5,16 @@ import Grid from '@material-ui/core/Grid';
 import './App.css';
 import AppBar from './Components/Appbar';
 import Footer from './Components/Footer';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import MyBooks from './Components/MyBooks'
 // Mahmoud import
 import FilledInputAdornments from './Components/SignUpForm' 
 // import AppBar from './Components/Appbar';
 // import AppBar from './Components/Appbar';
 
 // Feras import
-import BookCard from './Components/BookCard.js'
+import BooksList from './Components/BooksList';
+import BookCard from './Components/BookCard'
 // import AppBar from './Components/Appbar';
 // import AppBar from './Components/Appbar';
 //import SearchResults from './Components/SearchResult';
@@ -33,6 +36,9 @@ function App() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
+    <BrowserRouter>
+    <AppBar />
+    <Switch>
     <Grid container spacing={3}>
       <Grid item xs={12}>
         <Paper className={classes.paper}><AppBar></AppBar></Paper>
@@ -68,7 +74,29 @@ function App() {
       <Grid item xs={12}>
         <Paper className={classes.paper}><Footer></Footer></Paper>
       </Grid>
+
+          <Grid item xs={9}>
+            <Paper className={classes.paper}>
+              <Route exact path='/' component={BooksList}></Route>
+              <Route exact path='/Profile' component={BooksList}></Route>
+              <Route exact path='/MyBooks' component={MyBooks}></Route>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={3}>
+            <Paper className={classes.paper}><FilledInputAdornments> </FilledInputAdornments></Paper>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Paper className={classes.paper}>test</Paper>
+          </Grid>
+
     </Grid>
+    </Switch>
+    <Footer></Footer>
+    </BrowserRouter>
+
+
   </div>
   );
 }
