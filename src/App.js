@@ -9,7 +9,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MyBooks from './Components/MyBooks'
 // Mahmoud import
 import FilledInputAdornments from './Components/SignUpForm' 
-// import AppBar from './Components/Appbar';
+import Profile from './Components/Profile';
+
 // import AppBar from './Components/Appbar';
 
 // Feras import
