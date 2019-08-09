@@ -75,13 +75,14 @@ export default function BookCard(props) {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <ul style={ulStyle}>
-            <li>Author: {props.author}</li>
-            <li>Year of publication: {props.year}</li>
-            <li>Country: {props.country}</li>
-            <li>City: {props.city}</li>
-          </ul>
+        <CardContent>          
+            Author: {props.author}
+            <br></br>
+            Year of publication: {props.year}
+            <br></br>
+            Country: {props.country}
+            <br></br>
+            City: {props.city}
         </CardContent>
       </Collapse>
     </Card>
