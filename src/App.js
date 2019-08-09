@@ -7,7 +7,8 @@ import AppBar from './Components/Appbar';
 import Footer from './Components/Footer';
 // Mahmoud import
 import FilledInputAdornments from './Components/SignUpForm' 
-// import AppBar from './Components/Appbar';
+import Profile from './Components/Profile';
+
 // import AppBar from './Components/Appbar';
 
 // Feras import
@@ -41,7 +42,7 @@ function App() {
         <Paper className={classes.paper}><FilledInputAdornments> </FilledInputAdornments></Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper}>Mahmoud</Paper>
+        <Paper className={classes.paper}> <Profile> Here goes the profile </Profile> </Paper>
       </Grid>
       <Grid item xs={12}>
         <Paper className={classes.paper}>Mahmoud</Paper>
