@@ -40,9 +40,6 @@ const useStyles = makeStyles(theme => ({
 export default function BookCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-  const ulStyle = {
-    listStyleType: "none",
-  };
   function handleExpandClick() {
     setExpanded(!expanded);
   }  
