@@ -15,7 +15,7 @@ import Profile from './Components/Profile';
 
 // Feras import
 import BooksList from './Components/BooksList';
-//import SubmitForm from './Components/SubmitForm';
+import SubmitForm from './Components/SubmitForm';
 // import AppBar from './Components/Appbar';
 
 const useStyles = makeStyles(theme => ({
@@ -44,7 +44,7 @@ function App() {
         <Route exact path='/' component={BooksList}></Route>
         <Route exact path='/Profile' component={BooksList}></Route>
         <Route exact path='/MyBooks' component={MyBooks}></Route>
-        <Route exact path='/addabook' component={MyBooks}></Route>
+        <Route exact path='/addabook' component={SubmitForm}></Route>
       </Paper>
     </Grid>
 
@@ -52,6 +52,10 @@ function App() {
         <Paper className={classes.paper}><SignUpForm ref={(component) => {window.SignUpForm = component;}}> </SignUpForm></Paper>
     </Grid>
 
+    <Grid item xs={12}>
+        <Paper className={classes.paper}><SubmitForm></SubmitForm></Paper>
+    </Grid>
+    
     </Grid>
     </Switch>
     <Footer></Footer>
