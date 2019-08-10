@@ -15,7 +15,7 @@ import Profile from './Components/Profile';
 
 // Feras import
 import BooksList from './Components/BooksList';
-import SubmitForm from './Components/SubmitForm';
+//import SubmitForm from './Components/SubmitForm';
 // import AppBar from './Components/Appbar';
 
 const useStyles = makeStyles(theme => ({
@@ -38,47 +38,27 @@ function App() {
     <AppBar />
     <Switch>
     <Grid container spacing={3}>
-      <Grid item xs={9}>
-        <Paper className={classes.paper}><BooksList /></Paper>
-      </Grid>
-      <Grid item xs={3}>
+
+    <Grid item xs={9}>
+      <Paper className={classes.paper}>
+        <Route exact path='/' component={BooksList}></Route>
+        <Route exact path='/Profile' component={BooksList}></Route>
+        <Route exact path='/MyBooks' component={MyBooks}></Route>
+      </Paper>
+    </Grid>
+
+    <Grid item xs={3}>
         <Paper className={classes.paper}><SignUpForm ref={(component) => {window.SignUpForm = component;}}> </SignUpForm></Paper>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}><SubmitForm ref={(component) => {window.SignUpForm = component;}}/></Paper>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}>Feras</Paper>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}>Feras</Paper>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}>Loai</Paper>
-      </Grid>
+    </Grid>
 
-          <Grid item xs={9}>
-            <Paper className={classes.paper}>
-              <Route exact path='/' component={BooksList}></Route>
-              <Route exact path='/Profile' component={BooksList}></Route>
-              <Route exact path='/MyBooks' component={MyBooks}></Route>
-            </Paper>
-          </Grid>
-
-          <Grid item xs={3}>
-            {/* <Paper className={classes.paper}><SignUpForm> </SignUpForm></Paper> */}
-          </Grid>
-
-          <Grid item xs={12}>
-            <Paper className={classes.paper}>test</Paper>
-          </Grid>
+    <Grid item xs={12}>
+      <Paper className={classes.paper}>test</Paper>
+    </Grid>
 
     </Grid>
     </Switch>
     <Footer></Footer>
     </BrowserRouter>
-
-
   </div>
   );
 }
