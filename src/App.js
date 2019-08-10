@@ -44,6 +44,7 @@ function App() {
         <Route exact path='/' component={BooksList}></Route>
         <Route exact path='/Profile' component={BooksList}></Route>
         <Route exact path='/MyBooks' component={MyBooks}></Route>
+        <Route exact path='/addabook' component={MyBooks}></Route>
       </Paper>
     </Grid>
 

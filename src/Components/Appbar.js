@@ -117,6 +117,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleMenuClose}><NavLink to='/'>Home</NavLink></MenuItem>
       <MenuItem onClick={handleMenuClose}><NavLink to='/Profile'>My Profile</NavLink></MenuItem>
       <MenuItem onClick={handleMenuClose}><NavLink to='/MyBooks'>My Books</NavLink></MenuItem>
+      <MenuItem onClick={handleMenuClose}><NavLink to='/addabook'>Add a Books</NavLink></MenuItem>
       <MenuItem onClick={handleMenuClose}>Sign out</MenuItem>
     </Menu>
     
@@ -167,14 +168,14 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography className={classes.title} variant="h6" noWrap>
             Share Book
           </Typography>
