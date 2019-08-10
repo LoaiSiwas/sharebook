@@ -64,6 +64,10 @@ export default function BookCard(props) {
             Country: {props.country}
             <br></br>
             City: {props.city}
+            <br></br>
+            <Button className={clsx(classes.expand, {[classes.expandOpen]: expanded, })} aria-expanded={expanded} aria-label="show more" size="small" color="primary">
+            Contact Owner
+           </Button>
         </CardContent>
       </Collapse>
     </Card>
