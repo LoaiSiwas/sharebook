@@ -118,7 +118,7 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleMenuClose}><NavLink to='/Profile'>My Profile</NavLink></MenuItem>
       <MenuItem onClick={handleMenuClose}><NavLink to='/MyBooks'>My Books</NavLink></MenuItem>
       <MenuItem onClick={handleMenuClose}><NavLink to='/addabook'>Add a Books</NavLink></MenuItem>
-      <MenuItem onClick={handleMenuClose}>Sign out</MenuItem>
+      {/* <MenuItem onClick={handleMenuClose}>Sign out</MenuItem> */}
     </Menu>
     
   );
