@@ -45,13 +45,7 @@ function App() {
         <Paper className={classes.paper}><SignUpForm ref={(component) => {window.SignUpForm = component;}}> </SignUpForm></Paper>
       </Grid>
       <Grid item xs={12}>
-        <Paper className={classes.paper}> <Profile> Here goes the profile </Profile> </Paper>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}>Mahmoud</Paper>
-      </Grid>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}><SubmitForm /></Paper>
+        <Paper className={classes.paper}><SubmitForm ref={(component) => {window.SignUpForm = component;}}/></Paper>
       </Grid>
       <Grid item xs={12}>
         <Paper className={classes.paper}>Feras</Paper>

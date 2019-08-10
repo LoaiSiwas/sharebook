@@ -33,6 +33,8 @@ firebase.initializeApp(firebaseConfig);
 
 firebase.auth().onAuthStateChanged(function (user) {
     window.SignUpForm.setState({ user: user })
+    window.SubmitForm.setState({ user: user })
+
 });
 ReactDOM.render(<App />, document.getElementById('root'));
 
