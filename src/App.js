@@ -42,7 +42,6 @@ function App() {
     <Grid item xs={9}>
       <Paper className={classes.paper}>
         <Route exact path='/' component={BooksList}></Route>
-        <Route exact path='/Profile' component={BooksList}></Route>
         <Route exact path='/MyBooks' component={MyBooks}></Route>
         <Route exact path='/addabook' component={SubmitForm}></Route>
       </Paper>
