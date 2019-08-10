@@ -8,7 +8,7 @@ import Footer from './Components/Footer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MyBooks from './Components/MyBooks'
 // Mahmoud import
-import FilledInputAdornments from './Components/SignUpForm' 
+import SignUpForm from './Components/SignUpForm' 
 import Profile from './Components/Profile';
 
 // import AppBar from './Components/Appbar';
@@ -42,7 +42,7 @@ function App() {
         <Paper className={classes.paper}><BooksList /></Paper>
       </Grid>
       <Grid item xs={3}>
-        <Paper className={classes.paper}><FilledInputAdornments> </FilledInputAdornments></Paper>
+        <Paper className={classes.paper}><SignUpForm ref={(component) => {window.SignUpForm = component;}}> </SignUpForm></Paper>
       </Grid>
       <Grid item xs={12}>
         <Paper className={classes.paper}> <Profile> Here goes the profile </Profile> </Paper>
@@ -72,7 +72,7 @@ function App() {
           </Grid>
 
           <Grid item xs={3}>
-            <Paper className={classes.paper}><FilledInputAdornments> </FilledInputAdornments></Paper>
+            {/* <Paper className={classes.paper}><SignUpForm> </SignUpForm></Paper> */}
           </Grid>
 
           <Grid item xs={12}>
