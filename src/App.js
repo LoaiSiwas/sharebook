@@ -51,10 +51,6 @@ function App() {
         <Paper className={classes.paper}><SignUpForm ref={(component) => {window.SignUpForm = component;}}> </SignUpForm></Paper>
     </Grid>
 
-    <Grid item xs={12}>
-        <Paper className={classes.paper}><SubmitForm></SubmitForm></Paper>
-    </Grid>
-    
     </Grid>
     </Switch>
     <Footer></Footer>
