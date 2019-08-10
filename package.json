@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.3.0",
     "@material-ui/icons": "^4.2.1",
+    "babel-eslint": "^10.0.2",
     "firebase": "^6.3.4",
     "packages": "0.0.8",
     "react": "^16.8.6",

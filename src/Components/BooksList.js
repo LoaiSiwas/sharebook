@@ -1,9 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
-import BookCard from './BookCard'
+import BookCard from './BookCard';
 import Grid from '@material-ui/core/Grid';
-
-
 
 export default class BooksList extends React.Component {
     state = {
