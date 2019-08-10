@@ -238,20 +238,18 @@ class SignUpForm extends React.Component {
               }}
             />
           </Grid>
-
-
           {/* LogIn button */}
-          <Button onClick={this.signIn} variant="contained"  
-          
-          style={{margin:10}}
-          color="primary"  >
-            Log in
-                     </Button>
+          <Button onClick={this.signIn} variant="contained"   
+          style={{margin:10}}>
+          Log in
+          </Button>
         </Grid>
-
+            
         {/*  signUp Form  */}
-        <Grid>
-
+        <Grid container
+        direction="column"
+        justify="flex-start"
+        alignItems="flex-start">
           {/* FirstName */}
           <Grid item>
             <TextField
@@ -315,7 +313,7 @@ class SignUpForm extends React.Component {
                 startAdornment: <InputAdornment position="start"></InputAdornment>,
               }}
             />
-
+            </Grid>
             <Grid item>
               <TextField
                 id="filled-adornment-password" 
@@ -343,15 +341,15 @@ class SignUpForm extends React.Component {
               />
             </Grid>
             <Grid item>
-              <Button onClick={this.signUp} variant="contained"  >
+              <Button onClick={this.signUp} variant="contained" style={{margin:10}}>
                 Sign up
-                            </Button>
+              </Button>
             </Grid>
           </Grid>
 
         </Grid>
       </Grid>
-    </Grid>
+    
     );
   }
 
